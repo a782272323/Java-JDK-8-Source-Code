@@ -49,3 +49,6 @@ banner.txt
 *.zip
 *.tar.gz
 *.rar
+
+### output ###
+output/
