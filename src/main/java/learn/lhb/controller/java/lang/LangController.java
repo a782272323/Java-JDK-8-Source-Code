@@ -61,6 +61,8 @@ public class LangController {
                 return stringService.equalsIgnoreCase(methodType);
             case COMPARE_TO:
                 return stringService.compareTo(methodType);
+            case COMPARE_TO_IGNORE_CASE:
+                return stringService.compareToIgnoreCase(methodType);
             default:
                 return ResponseConstant.RESPONSE_ERROR_PRINT_MSG;
         }

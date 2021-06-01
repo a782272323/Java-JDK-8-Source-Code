@@ -186,4 +186,14 @@ public interface StringService {
      * @Return {@link String}
      */
     public String compareTo(StringEnum methodType);
+
+    /**
+     * @Description public int compareToIgnoreCase(String str)
+     * 按字典顺序比较两个字符串
+     * @Author lianghongbin
+     * @Date 19:50 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String compareToIgnoreCase(StringEnum methodType);
 }

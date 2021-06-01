@@ -328,6 +328,28 @@ public class StringServiceImpl implements StringService {
     }
 
     /**
+     * @Description public int compareToIgnoreCase(String str)
+     * 按字典顺序比较两个字符串
+     * @Author lianghongbin
+     * @Date 19:50 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String compareToIgnoreCase(StringEnum methodType) {
+        String string1 = StringConstant.STRING_NUMBER_REVERSE;
+        String string2 = StringConstant.STRING_NUMBER;
+        String str1 = StringConstant.STRING_BIG_LETTER;
+        String str2 = StringConstant.STRING_SMALL_LETTER;
+        log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), string1, string2, string1.compareToIgnoreCase(string2));
+        log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), string1, string1, string1.compareToIgnoreCase(string1));
+        log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), string2, string1, string2.compareToIgnoreCase(string1));
+        log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), string1, str1, string1.compareToIgnoreCase(str1));
+        log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), str1, string1, str1.compareToIgnoreCase(string1));
+        return responseStr(methodType);
+    }
+
+    /**
      * @Description charAt()方法，返回指定索引处的值
      * @Author lianghongbin
      * @Date 12:14 2021/5/31
