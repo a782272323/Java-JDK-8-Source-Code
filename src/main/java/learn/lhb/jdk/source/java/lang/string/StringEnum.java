@@ -13,15 +13,21 @@ public enum StringEnum {
     /**
      * 枚举字段
      */
-    LENGTH("length"),
-    IS_EMPTY("isEmpty"),
-    CHAR_AT("charAt"),
-    CODE_POINT_AT("codePointAt"),
-    CODE_POINT_BEFORE("codePointBefore"),
-    OFFSET_BY_CODE_POINTS("offsetByCodePoints"),
-    CODE_POINT_COUNT("code_point_count"),
-    GET_CHARS("getChars"),
-    GET_BYTES_1("getBytes");
+    LENGTH("public int length()"),
+    IS_EMPTY("public boolean isEmpty()"),
+    CHAR_AT("public char charAt(int index)"),
+    CODE_POINT_AT("public int codePointAt(int index)"),
+    CODE_POINT_BEFORE("public int codePointBefore(int index)"),
+    OFFSET_BY_CODE_POINTS("public int offsetByCodePoints(int index, int codePointOffset)"),
+    CODE_POINT_COUNT("public int codePointCount(int beginIndex, int endIndex)"),
+    GET_CHARS("public void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)"),
+    GET_BYTES_1("public void getBytes(int srcBegin, int srcEnd, byte[] dst, int dstBegin)"),
+    GET_BYTES_2("public byte[] getBytes(String charsetName) throws UnsupportedEncodingException"),
+    GET_BYTES_3("public byte[] getBytes(Charset charset)"),
+    GET_BYTES_4("public byte[] getBytes()"),
+    EQUALS("public boolean equals(Object anObject)"),
+    CONTENT_EQUALS("public boolean contentEquals(StringBuffer sb)"),
+    EQUALS_IGNORE_CASE("public boolean equalsIgnoreCase(String anotherString)");
 
     public String methodName;
 

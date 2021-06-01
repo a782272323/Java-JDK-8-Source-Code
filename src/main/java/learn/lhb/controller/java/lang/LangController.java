@@ -19,8 +19,15 @@ public class LangController {
     @Autowired
     private StringService stringService;
 
+    /**
+     * @Description String 的使用案例
+     * @Author lianghongbin
+     * @Date 14:16 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
     @GetMapping("string/case")
-    public String stringCase(StringEnum methodType) {
+    public String stringCase(StringEnum methodType) throws Exception{
         switch (methodType) {
             case LENGTH:
                 return stringService.length(methodType);
@@ -40,6 +47,18 @@ public class LangController {
                 return stringService.getChars(methodType);
             case GET_BYTES_1:
                 return stringService.getBytes1(methodType);
+            case GET_BYTES_2:
+                return stringService.getBytes2(methodType);
+            case GET_BYTES_3:
+                return stringService.getBytes3(methodType);
+            case GET_BYTES_4:
+                return stringService.getBytes4(methodType);
+            case EQUALS:
+                return stringService.equals(methodType);
+            case CONTENT_EQUALS:
+                return stringService.contentEquals(methodType);
+            case EQUALS_IGNORE_CASE:
+                return stringService.equalsIgnoreCase(methodType);
             default:
                 return ResponseConstant.RESPONSE_ERROR_PRINT_MSG;
         }

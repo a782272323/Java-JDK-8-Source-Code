@@ -189,6 +189,120 @@ public class StringServiceImpl implements StringService {
     }
 
     /**
+     * @Description public byte[] getBytes(String charsetName) throws UnsupportedEncodingException
+     * 使用命名的字符集将此String编码为字节序列，将结果存储到新的字节数组中(设置字符串的编码模式)
+     * @Author lianghongbin
+     * @Date 14:13 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String getBytes2(StringEnum methodType) throws Exception{
+        String string = StringConstant.STRING_SMALL_LETTER;
+        log.info("字符串 = {}， 方法 = {}， 结果 = {}", string, methodType.getMethodName(), string.getBytes("ISO-8859-1"));
+        log.info("字符串 = {}， 方法 = {}， 结果 = {}", string, methodType.getMethodName(), string.getBytes("UTF-8"));
+        log.info("字符串 = {}， 方法 = {}， 结果 = {}", string, methodType.getMethodName(), string.getBytes("US-ASCII"));
+        log.info("字符串 = {}， 方法 = {}， 结果 = {}", string, methodType.getMethodName(), string.getBytes("UTF-16"));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public byte[] getBytes(Charset charset)
+     * 使用平台的默认字符集将此String编码为字节序列，将结果存储到新的字节数组中
+     * @Author lianghongbin
+     * @Date 14:25 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String getBytes3(StringEnum methodType) throws Exception {
+        String string = StringConstant.STRING_BIG_LETTER;
+        byte[] copyByte = new byte[string.length()];
+        copyByte = string.getBytes("UTF-8");
+        log.info("字符串 = {}，方法 = {}， 结果 = {}", string, methodType.getMethodName(), copyByte);
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public byte[] getBytes()
+     * 使用平台的默认字符集将此String编码为字节序列，将结果存储到新的字节数组中。
+     * @Author lianghongbin
+     * @Date 14:30 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String getBytes4(StringEnum methodType) {
+        String string = StringConstant.STRING_NUMBER_REVERSE;
+        log.info("字符串 = {}， 方法 = {}， 结果 = {}", string, methodType.getMethodName(), string.getBytes());
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean equals(Object anObject)
+     * 将此字符串与指定对象进行比较。 其结果是true当且仅当该参数不是null并且是String对象，表示相同的字符序列作为该对象。
+     * @Author lianghongbin
+     * @Date 14:35 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String equals(StringEnum methodType) {
+        String string1 = StringConstant.STRING_BIG_LETTER;
+        String string2 = StringConstant.STRING_BIG_LETTER;
+        String nullString1 = null;
+        String nullString2 = null;
+        String str1 = "";
+        String str2 = "";
+        String string = StringConstant.STRING_NUMBER_REVERSE;
+        log.info("使用的方法 = {}" + methodType.getMethodName());
+        log.info("比较是否相等, {}.equals({}), 结果 = {}", string1, string2, string1.equals(string1));
+        log.info("比较是否相等, {}.equals({}), 结果 = {}", string1, string, string1.equals(string));
+        log.info("比较两个空字符串是否相等, {}.equals({}), 结果 = {}" , str1, str2, str1.equals(str2));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean contentEquals(StringBuffer sb)
+     * 将此字符串与指定的StringBuffer进行StringBuffer 。
+     * @Author lianghongbin
+     * @Date 14:53 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String contentEquals(StringEnum methodType) {
+        String string1 = StringConstant.STRING_NUMBER_REVERSE;
+        String string2 = StringConstant.STRING_NUMBER_REVERSE;
+        StringBuffer stringBuffer1 = new StringBuffer();
+        stringBuffer1.append(string1);
+        StringBuffer stringBuffer2 = new StringBuffer();
+        stringBuffer2.append(string2);
+        log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string1.contentEquals(stringBuffer1));
+        log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string1.contentEquals(stringBuffer2));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean equalsIgnoreCase(String anotherString)
+     * 将此String与其他String比较,判断两个字符串是不是同一个，不仅仅是值一样
+     * @Author lianghongbin
+     * @Date 15:00 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String equalsIgnoreCase(StringEnum methodType) {
+        String string = StringConstant.STRING_NUMBER_REVERSE;
+        String string2 = StringConstant.STRING_NUMBER_REVERSE;
+        String string1 = StringConstant.STRING_NUMBER;
+        log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string.equalsIgnoreCase(string1));
+        log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string2.equalsIgnoreCase(string1));
+        log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string2.equalsIgnoreCase(string2));
+        return responseStr(methodType);
+    }
+
+    /**
      * @Description charAt()方法，返回指定索引处的值
      * @Author lianghongbin
      * @Date 12:14 2021/5/31
