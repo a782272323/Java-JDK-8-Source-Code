@@ -303,6 +303,31 @@ public class StringServiceImpl implements StringService {
     }
 
     /**
+     * @Description public int compareTo(String anotherString)
+     * 按照字典顺序比较两个字符串，anotherString 代表参数字符串
+     * 如果值为0，代表参数字符串等于此字符串
+     * 如果值小于0，代表参数字符串大于此字符串
+     * 如果值大于0，代表参数字符串小于此字符串
+     * @Author lianghongbin
+     * @Date 19:18 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String compareTo(StringEnum methodType) {
+        String string1 = StringConstant.STRING_NUMBER_REVERSE;
+        String string2 = StringConstant.STRING_NUMBER;
+        String str1 = StringConstant.STRING_BIG_LETTER;
+        String str2 = StringConstant.STRING_SMALL_LETTER;
+        log.info("字符串 ，方法 = {}，{}.compareTo({}) = {}", methodType.getMethodName(), string1, string2, string1.compareTo(string2));
+        log.info("字符串 ，方法 = {}，{}.compareTo({}) = {}", methodType.getMethodName(), string1, string1, string1.compareTo(string1));
+        log.info("字符串 ，方法 = {}，{}.compareTo({}) = {}", methodType.getMethodName(), string2, string1, string2.compareTo(string1));
+        log.info("字符串 ，方法 = {}，{}.compareTo({}) = {}", methodType.getMethodName(), string1, str1, string1.compareTo(str1));
+        log.info("字符串 ，方法 = {}，{}.compareTo({}) = {}", methodType.getMethodName(), str1, string1, str1.compareTo(string1));
+        return responseStr(methodType);
+    }
+
+    /**
      * @Description charAt()方法，返回指定索引处的值
      * @Author lianghongbin
      * @Date 12:14 2021/5/31

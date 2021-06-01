@@ -27,7 +27,8 @@ public enum StringEnum {
     GET_BYTES_4("public byte[] getBytes()"),
     EQUALS("public boolean equals(Object anObject)"),
     CONTENT_EQUALS("public boolean contentEquals(StringBuffer sb)"),
-    EQUALS_IGNORE_CASE("public boolean equalsIgnoreCase(String anotherString)");
+    EQUALS_IGNORE_CASE("public boolean equalsIgnoreCase(String anotherString)"),
+    COMPARE_TO("public int compareTo(String anotherString)");
 
     public String methodName;
 

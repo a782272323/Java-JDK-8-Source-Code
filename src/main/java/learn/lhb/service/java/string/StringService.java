@@ -173,4 +173,17 @@ public interface StringService {
      * @Return {@link String}
      */
     public String equalsIgnoreCase(StringEnum methodType);
+
+    /**
+     * @Description public int compareTo(String anotherString)
+     * 按照字典顺序比较两个字符串，anotherString 代表参数字符串
+     * 如果值为0，代表参数字符串等于此字符串
+     * 如果值小于0，代表参数字符串大于此字符串
+     * 如果值大于0，代表参数字符串小于此字符串
+     * @Author lianghongbin
+     * @Date 19:18 2021/6/1
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String compareTo(StringEnum methodType);
 }
