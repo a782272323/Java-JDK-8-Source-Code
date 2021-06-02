@@ -167,6 +167,7 @@ public interface StringService {
     /**
      * @Description public boolean equalsIgnoreCase(String anotherString)
      * 将此String与其他String比较,判断两个字符串是不是同一个，不仅仅是值一样
+     * 不区分大小写比较字符串
      * @Author lianghongbin
      * @Date 15:00 2021/6/1
      * @Param methodType
@@ -196,4 +197,75 @@ public interface StringService {
      * @Return {@link String}
      */
     public String compareToIgnoreCase(StringEnum methodType);
+
+    /**
+     * @Description public boolean regionMatches(int toffset, String other, int ooffset, int len)
+     * toffset - 该字符串 toffset的起始偏移量。
+     * other - 字符串参数。
+     * ooffset - 字符串参数 ooffset的起始偏移量。
+     * len - 要比较的字符数
+     * 测试两个字符串指定区域的子字符串是否相等（从 toffset 开始到 len 长度的字符 = 子字符串）。
+     * 这个String对象的子字符串与其他参数的子字符串进行比较。 如果这些子串表示相同的字符序列，结果是真的。 要比较的String对象的子String从索引toffset开始，长度为len 。 其他要比较的ooffset始于索引ooffset ，长度为len 。 结果是false当且仅当以下至少有一个是真的：
+     * toffset为负数。
+     * ooffset是否定的。
+     * toffset+len大于此String对象的长度。
+     * ooffset+len大于另一个参数的长度。
+     * @Author lianghongbin
+     * @Date 8:51 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String regionMatches1(StringEnum methodType);
+
+    /**
+     * @Description public boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
+     * toffset - 该字符串 toffset的起始偏移量。
+     * other - 字符串参数。
+     * ooffset - 字符串参数 ooffset的起始偏移量。
+     * len - 要比较的字符数
+     * 测试两个字符串指定区域的子字符串是否相等（从 toffset 开始到 len 长度的字符 = 子字符串）,同时支持忽略大小写（不区分大小写）。
+     * 这个String对象的子字符串与其他参数的子字符串进行比较。 如果这些子串表示相同的字符序列，结果是真的。 要比较的String对象的子String从索引toffset开始，长度为len 。 其他要比较的ooffset始于索引ooffset ，长度为len 。 结果是false当且仅当以下至少有一个是真的：
+     * ignoreCase true - 不区分大小写，false - 区分大小写
+     * toffset为负数。
+     * ooffset是否定的。
+     * toffset+len大于此String对象的长度。
+     * ooffset+len大于另一个参数的长度。
+     * @Author lianghongbin
+     * @Date 9:32 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String regionMatches2(StringEnum methodType);
+
+    /**
+     * @Description public boolean startsWith(String prefix, int toffset)
+     * 判断在指定索引处开始的此字符串的子字符串是否以指定的前缀开头。
+     * prefix - 前缀。
+     * toffset - 在哪里开始查找这个字符串。
+     * @Author lianghongbin
+     * @Date 9:44 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String startsWith1(StringEnum methodType);
+
+    /**
+     * @Description public boolean startsWith(String prefix)
+     * 测试此字符串是否以指定的前缀开头。
+     * @Author lianghongbin
+     * @Date 9:55 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String startsWith2(StringEnum methodType);
+
+    /**
+     * @Description public boolean endsWith(String suffix)
+     * 此字符串是否以指定的后缀结尾
+     * @Author lianghongbin
+     * @Date `9:58` 2021/6/2
+     * @Param methodType
+     * @Return {@link java.lang.String}
+     */
+    public String endsWith(StringEnum methodType);
 }

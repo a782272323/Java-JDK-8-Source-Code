@@ -29,7 +29,12 @@ public enum StringEnum {
     CONTENT_EQUALS("public boolean contentEquals(StringBuffer sb)"),
     EQUALS_IGNORE_CASE("public boolean equalsIgnoreCase(String anotherString)"),
     COMPARE_TO("public int compareTo(String anotherString)"),
-    COMPARE_TO_IGNORE_CASE("public int compareToIgnoreCase(String str)");
+    COMPARE_TO_IGNORE_CASE("public int compareToIgnoreCase(String str)"),
+    REGION_MATCHES_1("public boolean regionMatches(int toffset, String other, int ooffset, int len)"),
+    REGION_MATCHES_2("public boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)"),
+    STARTS_WITH_1("public boolean startsWith(String prefix, int toffset)"),
+    STARTS_WITH_2("public boolean startsWith(String prefix)"),
+    ENDS_WITH("public boolean endsWith(String suffix)");
 
     public String methodName;
 

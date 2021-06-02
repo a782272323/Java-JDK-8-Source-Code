@@ -1,7 +1,7 @@
 package learn.lhb.service.impl.java.lang;
 
 import learn.lhb.common.constant.ResponseConstant;
-import learn.lhb.jdk.source.java.lang.string.StringConstant;
+import learn.lhb.common.constant.StringConstant;
 import learn.lhb.jdk.source.java.lang.string.StringEnum;
 import learn.lhb.service.java.string.StringService;
 import lombok.extern.slf4j.Slf4j;
@@ -286,6 +286,7 @@ public class StringServiceImpl implements StringService {
     /**
      * @Description public boolean equalsIgnoreCase(String anotherString)
      * 将此String与其他String比较,判断两个字符串是不是同一个，不仅仅是值一样
+     * 不区分大小写比较字符串
      * @Author lianghongbin
      * @Date 15:00 2021/6/1
      * @Param methodType
@@ -296,9 +297,12 @@ public class StringServiceImpl implements StringService {
         String string = StringConstant.STRING_NUMBER_REVERSE;
         String string2 = StringConstant.STRING_NUMBER_REVERSE;
         String string1 = StringConstant.STRING_NUMBER;
+        String str1 = StringConstant.STRING_BIG_LETTER;
+        String str2 = StringConstant.STRING_SMALL_LETTER;
         log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string.equalsIgnoreCase(string1));
         log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string2.equalsIgnoreCase(string1));
         log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), string2.equalsIgnoreCase(string2));
+        log.info("方法 = {}， 结果 = {}", methodType.getMethodName(), str1.equalsIgnoreCase(str2));
         return responseStr(methodType);
     }
 
@@ -346,6 +350,118 @@ public class StringServiceImpl implements StringService {
         log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), string2, string1, string2.compareToIgnoreCase(string1));
         log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), string1, str1, string1.compareToIgnoreCase(str1));
         log.info("字符串 ，方法 = {}，{}.compareToIgnoreCase({}) = {}", methodType.getMethodName(), str1, string1, str1.compareToIgnoreCase(string1));
+        return responseStr(methodType);
+    }
+
+    @Override
+    public String regionMatches1(StringEnum methodType) {
+        String string1 = StringConstant.STRING_BIG_LETTER;
+        String string2 = StringConstant.STRING_BIG_LETTER_12;
+        String str1 = StringConstant.STRING_SMALL_LETTER;
+        String str2 = StringConstant.STRING_SMALL_LETTER_12;
+        int toffset = 3;
+        int len = 5;
+        log.info("方法 = {}， 同为大写的两个字符串比较 = {}", methodType.getMethodName(), string1.regionMatches(toffset, string2, toffset, len));
+        log.info("方法 = {}， 同为小写的两个字符串比较 = {}", methodType.getMethodName(), str1.regionMatches(toffset, string2, toffset, len));
+        log.info("方法 = {}， 大小写不同的两个字符串比较 = {}", methodType.getMethodName(), string1.regionMatches(toffset, str2, toffset, len));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
+     * toffset - 该字符串 toffset的起始偏移量。
+     * other - 字符串参数。
+     * ooffset - 字符串参数 ooffset的起始偏移量。
+     * len - 要比较的字符数
+     * 测试两个字符串指定区域的子字符串是否相等（从 toffset 开始到 len 长度的字符 = 子字符串）,同时支持忽略大小写（不区分大小写）。
+     * 这个String对象的子字符串与其他参数的子字符串进行比较。 如果这些子串表示相同的字符序列，结果是真的。 要比较的String对象的子String从索引toffset开始，长度为len 。 其他要比较的ooffset始于索引ooffset ，长度为len 。 结果是false当且仅当以下至少有一个是真的：
+     * ignoreCase true - 不区分大小写，false - 区分大小写
+     * toffset为负数。
+     * ooffset是否定的。
+     * toffset+len大于此String对象的长度。
+     * ooffset+len大于另一个参数的长度。
+     * @Author lianghongbin
+     * @Date 9:32 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String regionMatches2(StringEnum methodType) {
+        String string1 = StringConstant.STRING_BIG_LETTER;
+        String string2 = StringConstant.STRING_BIG_LETTER_12;
+        String str1 = StringConstant.STRING_SMALL_LETTER;
+        String str2 = StringConstant.STRING_SMALL_LETTER_12;
+        int toffset = 3;
+        int len = 5;
+        log.info("方法 = {}， 同为大写的两个字符串比较 = {}", methodType.getMethodName(), string1.regionMatches(true, toffset, string2, toffset, len));
+        log.info("方法 = {}， 同为小写的两个字符串比较 = {}", methodType.getMethodName(), str1.regionMatches(true, toffset, string2, toffset, len));
+        log.info("方法 = {}， 大小写不同的两个字符串比较 = {}", methodType.getMethodName(), string1.regionMatches(true, toffset, str2, toffset, len));
+        log.info("方法 = {}， 大小写不同的两个字符串比较 = {}", methodType.getMethodName(), string1.regionMatches(false, toffset, str2, toffset, len));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean startsWith(String prefix, int toffset)
+     * 判断在指定索引处开始的此字符串的子字符串是否以指定的前缀开头。
+     * prefix - 前缀。
+     * toffset - 在哪里开始查找这个字符串。
+     * @Author lianghongbin
+     * @Date 9:44 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String startsWith1(StringEnum methodType) {
+        String string1 = StringConstant.STRING_SMALL_LETTER_PREFIX_4;
+        String string2 = StringConstant.STRING_SMALL_LETTER;
+        String str1 = StringConstant.STRING_BIG_LETTER_PREFIX_4;
+        String str2 = StringConstant.STRING_BIG_LETTER;
+        int toffset1 = 0;
+        int toffset2 = 2;
+        log.info("字符串 = {}，前缀字符串 = {}，方法 = {}，结果 = {}", string1, string2, methodType.getMethodName(), string2.startsWith(string1, toffset1));
+        log.info("字符串 = {}，前缀字符串 = {}，方法 = {}，结果 = {}", str1, str2, methodType.getMethodName(), str2.startsWith(str1, toffset1));
+        log.info("字符串 = {}，前缀字符串 = {}，方法 = {}，结果 = {}", str1, string2, methodType.getMethodName(), string2.startsWith(str1, toffset1));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean startsWith(String prefix)
+     * 测试此字符串是否以指定的前缀开头。
+     * @Author lianghongbin
+     * @Date 9:55 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    @Override
+    public String startsWith2(StringEnum methodType) {
+        String string1 = StringConstant.STRING_SMALL_LETTER_PREFIX_4;
+        String string2 = StringConstant.STRING_SMALL_LETTER;
+        String str1 = StringConstant.STRING_BIG_LETTER_PREFIX_4;
+        String str2 = StringConstant.STRING_BIG_LETTER;
+        log.info("字符串 = {}，前缀字符串 = {}，方法 = {}，结果 = {}", string2, string1, methodType.getMethodName(), string2.startsWith(string1));
+        log.info("字符串 = {}，前缀字符串 = {}，方法 = {}，结果 = {}", str2, str1, methodType.getMethodName(), str2.startsWith(str1));
+        log.info("字符串 = {}，前缀字符串 = {}，方法 = {}，结果 = {}", str2, string1, methodType.getMethodName(), string2.startsWith(str1));
+        return responseStr(methodType);
+    }
+
+    /**
+     * @Description public boolean endsWith(String suffix)
+     * 此字符串是否以指定的后缀结尾
+     * @Author lianghongbin
+     * @Date `9:58` 2021/6/2
+     * @Param methodType
+     * @Return {@link java.lang.String}
+     */
+    @Override
+    public String endsWith(StringEnum methodType) {
+        String string1 = StringConstant.STRING_SMALL_LETTER_SUFFIX_4;
+        String string2 = StringConstant.STRING_SMALL_LETTER;
+        String str1 = StringConstant.STRING_BIG_LETTER_SUFFIX_4;
+        String str2 = StringConstant.STRING_BIG_LETTER;
+        log.info("字符串 = {}，后缀字符串 = {}，方法 = {}，结果 = {}", string2, string1, methodType.getMethodName(), string2.startsWith(string1));
+        log.info("字符串 = {}，后缀字符串 = {}，方法 = {}，结果 = {}", str2, str1, methodType.getMethodName(), str2.startsWith(str1));
+        log.info("字符串 = {}，后缀字符串 = {}，方法 = {}，结果 = {}", string2, str1, methodType.getMethodName(), string2.startsWith(str1));
+
         return responseStr(methodType);
     }
 

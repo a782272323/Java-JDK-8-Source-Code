@@ -63,6 +63,16 @@ public class LangController {
                 return stringService.compareTo(methodType);
             case COMPARE_TO_IGNORE_CASE:
                 return stringService.compareToIgnoreCase(methodType);
+            case REGION_MATCHES_1:
+                return stringService.regionMatches1(methodType);
+            case REGION_MATCHES_2:
+                return stringService.regionMatches2(methodType);
+            case STARTS_WITH_1:
+                return stringService.startsWith1(methodType);
+            case STARTS_WITH_2:
+                return stringService.startsWith2(methodType);
+            case ENDS_WITH:
+                return stringService.endsWith(methodType);
             default:
                 return ResponseConstant.RESPONSE_ERROR_PRINT_MSG;
         }
