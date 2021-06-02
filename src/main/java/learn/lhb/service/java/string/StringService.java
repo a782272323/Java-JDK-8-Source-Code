@@ -268,4 +268,229 @@ public interface StringService {
      * @Return {@link java.lang.String}
      */
     public String endsWith(StringEnum methodType);
+
+    /**
+     * @Description public int hashCode()
+     * 返回该字符串的hashCode
+     * @Author lianghongbin
+     * @Date 14:30 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String hashCode(StringEnum methodType);
+
+    /**
+     * @Description public int indexOf(int ch)
+     * 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 14:36 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String indexOf1(StringEnum methodType);
+
+    /**
+     * @Description public int indexOf(int ch, int fromIndex)
+     * 从指定的索引处开始搜索，返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 15:13 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String indexOf2(StringEnum methodType);
+
+    /**
+     * @Description public int indexOf(String str)
+     * 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 14:36 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String indexOf3(StringEnum methodType);
+
+    /**
+     * @Description public int indexOf(String str, int fromIndex)
+     * 从指定的索引处开始搜索，返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 15:13 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String indexOf4(StringEnum methodType);
+
+    /**
+     * @Description public int lastIndexOf(int ch)
+     * 返回指定字符的最后一次出现的字符串中的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 15:23 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String lastIndexOf1(StringEnum methodType);
+
+    /**
+     * @Description public int lastIndexOf(int ch, int fromIndex)
+     * 从指定的索引开始，返回指定字符的最后一次出现的字符串中的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 15:23 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String lastIndexOf2(StringEnum methodType);
+
+    /**
+     * @Description public int lastIndexOf(String str)
+     * 返回指定字符的最后一次出现的字符串中的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 15:23 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String lastIndexOf3(StringEnum methodType);
+
+    /**
+     * @Description public int lastIndexOf(String str, int fromIndex)
+     * 从指定的索引开始，返回指定字符的最后一次出现的字符串中的索引，如果此字符串中没有这样的字符，则返回 -1
+     * @Author lianghongbin
+     * @Date 15:23 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String lastIndexOf4(StringEnum methodType);
+
+    /**
+     * @Description public String substring(int beginIndex)
+     * 从指定索引处开始，返回一个字符串，该字符串是此字符串的子字符串。
+     * @Author lianghongbin
+     * @Date 15:29 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String subString1(StringEnum methodType);
+
+    /**
+     * @Description public String substring(int beginIndex, int endIndex)
+     * 从初始索引处开始，到初始索引结束。返回一个字符串，该字符串是此字符串的子字符串。
+     * @Author lianghongbin
+     * @Date 15:32 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String subString2(StringEnum methodType);
+
+    /**
+     * @Description public CharSequence subSequence(int beginIndex, int endIndex)
+     * 从初始索引处开始，到初始索引结束。返回一个字符串序列，该字符串是此字符串的子字符串。
+     * @Author lianghongbin
+     * @Date 15:37 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String subSequence(StringEnum methodType);
+
+    /**
+     * @Description public String concat(String str)
+     * 将指定的字符串连接到该字符串的末尾。
+     * 如果参数字符串的长度为0 ，则返回此String对象。
+     * @Author lianghongbin
+     * @Date 15:40 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String concat(StringEnum methodType);
+
+    /**
+     * @Description public String replace(char oldChar, char newChar)
+     * 用新字符newChar 替换所有的 旧字符oldChar 。
+     * @Author lianghongbin
+     * @Date 15:45 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String replace1(StringEnum methodType);
+
+    /**
+     * @Description public String replace(CharSequence target, CharSequence replacement)
+     * 将与字面目标序列匹配的字符串的每个子字符串替换为指定的字面替换序列。
+     * 替换从字符串开始到结束，例如，在字符串“aaa”中用“b”替换“aa”将导致“ba”而不是“ab”。
+     * @Author lianghongbin
+     * @Date 15:55 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String replace2(StringEnum methodType);
+
+    /**
+     * @Description public boolean matches(String regex)
+     * 返回是否匹配指定的字符串，如果匹配则为true,否则为false
+     * 若正则表达式的语法错误，则抛异常 PatternSyntaxException
+     * @Author lianghongbin
+     * @Date 16:00 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String matches(StringEnum methodType);
+
+    /**
+     * @Description public boolean contains(CharSequence s)
+     * 判断字符串是否包含某个字符串，若包含则返回true，反之返回false
+     * @Author lianghongbin
+     * @Date 16:19 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String contains(StringEnum methodType);
+
+    /**
+     * @Description public String replaceFirst(String regex, String replacement)
+     * 通过regex的正则表达式来匹配，如果匹配了则将原来的字符串替换为新的字符串replacement
+     * @Author lianghongbin
+     * @Date 17:08 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String replaceFirst(StringEnum methodType);
+
+    /**
+     * @Description public String replaceAll(String regex, String replacement)
+     * 通过regex的正则表达式来匹配，如果匹配了则将原来的字符串替换为新的字符串replacement
+     * @Author lianghongbin
+     * @Date 17:30 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String replaceAll(StringEnum methodType);
+
+    /**
+     * @Description public String[] split(String regex, int limit)
+     * 按照正则表达式分割字段
+     * regex - 分隔正则表达式
+     * limit - 现在返回的结果数
+     * @Author lianghongbin
+     * @Date 18:06 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String split1(StringEnum methodType);
+
+    /**
+     * @Description public String[] split(String regex)
+     * 按照正则表达式分割字段
+     * @Author lianghongbin
+     * @Date 18:18 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String split2(StringEnum methodType);
+
+    /**
+     * @Description public static String join(CharSequence delimiter, CharSequence... elements)
+     *
+     * @Author lianghongbin
+     * @Date 18:22 2021/6/2
+     * @Param methodType
+     * @Return {@link String}
+     */
+//    public String join1(StringEnum methodType);
 }

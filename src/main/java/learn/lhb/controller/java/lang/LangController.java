@@ -73,6 +73,48 @@ public class LangController {
                 return stringService.startsWith2(methodType);
             case ENDS_WITH:
                 return stringService.endsWith(methodType);
+            case HASH_CODE:
+                return stringService.hashCode(methodType);
+            case INDEX_OF_1:
+                return stringService.indexOf1(methodType);
+            case INDEX_OF_2:
+                return stringService.indexOf2(methodType);
+            case INDEX_OF_3:
+                return stringService.indexOf3(methodType);
+            case INDEX_OF_4:
+                return stringService.indexOf4(methodType);
+            case LAST_INDEX_OF_1:
+                return stringService.lastIndexOf1(methodType);
+            case LAST_INDEX_OF_2:
+                return stringService.lastIndexOf2(methodType);
+            case LAST_INDEX_OF_3:
+                return stringService.lastIndexOf3(methodType);
+            case LAST_INDEX_OF_4:
+                return stringService.lastIndexOf4(methodType);
+            case SUBSTRING_1:
+                return stringService.subString1(methodType);
+            case SUBSTRING_2:
+                return stringService.subString2(methodType);
+            case SUB_SEQUENCE:
+                return stringService.subSequence(methodType);
+            case CONCAT:
+                return stringService.concat(methodType);
+            case REPLACE_1:
+                return stringService.replace1(methodType);
+            case REPLACE_2:
+                return stringService.replace2(methodType);
+            case MATCHES:
+                return stringService.matches(methodType);
+            case CONTAINS:
+                return stringService.contains(methodType);
+            case REPLACE_FIRST:
+                return stringService.replaceFirst(methodType);
+            case REPLACE_ALL:
+                return stringService.replaceAll(methodType);
+            case SPLIT_1:
+                return stringService.split1(methodType);
+            case SPLIT_2:
+                return stringService.split2(methodType);
             default:
                 return ResponseConstant.RESPONSE_ERROR_PRINT_MSG;
         }
