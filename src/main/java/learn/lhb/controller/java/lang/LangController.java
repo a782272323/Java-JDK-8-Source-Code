@@ -115,6 +115,43 @@ public class LangController {
                 return stringService.split1(methodType);
             case SPLIT_2:
                 return stringService.split2(methodType);
+            case JOIN_1:
+                return stringService.join1(methodType);
+            case JOIN_2:
+                return stringService.join2(methodType);
+            case TO_LOWER_CASE_1:
+                return stringService.toLowerCase1(methodType);
+            case TO_LOWER_CASE_2:
+                return stringService.toLowerCase2(methodType);
+            case TO_UPPER_CASE_1:
+                return stringService.toUpperCase1(methodType);
+            case TO_UPPER_CASE_2:
+                return stringService.toUpperCase2(methodType);
+            case TRIM:
+                return stringService.trim(methodType);
+            case TO_STRING:
+                return stringService.toString(methodType);
+            case TO_CHAR_ARRAY:
+                return stringService.toCharArray(methodType);
+            case FORMAT_1:
+            case FORMAT_2:
+                return stringService.format(methodType);
+            case VALUE_OF_1:
+                return stringService.valueOf1(methodType);
+            case VALUE_OF_2:
+                return stringService.valueOf2(methodType);
+            case VALUE_OF_3:
+                return stringService.valuesOf3(methodType);
+            case VALUE_OF_4:
+                return stringService.valueOf4(methodType);
+            case VALUE_OF_5:
+                return stringService.valueOf5(methodType);
+            case COPY_VALUE_OF_1:
+                return stringService.copyValueOf1(methodType);
+            case COPY_VALUE_OF_2:
+                return stringService.copyValueOf2(methodType);
+            case INTERN:
+                return stringService.intern(methodType);
             default:
                 return ResponseConstant.RESPONSE_ERROR_PRINT_MSG;
         }

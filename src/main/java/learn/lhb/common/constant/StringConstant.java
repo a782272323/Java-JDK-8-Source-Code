@@ -30,6 +30,16 @@ public class StringConstant {
     public static final String STRING_BIG_LETTER_PREFIX_4 = "ABCD";
     public static final String STRING_BIG_LETTER_SUFFIX_4 = "WXYZ";
     /**
+     * 大小写混合的字符串常量
+     */
+    public static final String STRING_LETTER_TYPE_1 = "AbCdEfGhIjKlMnOpQrStUvWsYz";
+    public static final String STRING_LETTER_TYPE_2 = "aBcDeFgHiJkLmNoPqRsTuVwSyZ";
+    /**
+     * 混合字符串
+     */
+    public static final String STRING_MIXTURE_TYPE_1 = "AbCDEFghijkLmN0124OPqr3sTUvwXyz56789";
+    public static final String STRING_MIXTURE_TYPE_2 = "Ab=CDEFghijkLmN0124OPqr3sTUv..wXyz56789+";
+    /**
      * 邮箱相关的字符串常量
      */
     public static final String STRING_ERROR_MAIL_TYPE_1 = "7822.com";
@@ -52,6 +62,14 @@ public class StringConstant {
     public static final String STRING_SPLIT_TYPE_2 = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
     public static final String STRING_SPLIT_TYPE_3 = "0.1.3.4.5.6.7.8.9";
     public static final String STRING_SPLIT_TYPE_4 = "9.8.7.6.5.4.3.2.1.0";
+    /**
+     * 空格字符串
+     */
+    public static final String STRING_SPACE_TYPE_1 = " ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+    public static final String STRING_SPACE_TYPE_2 = " abcdefghijklmnopqrstuvwxyz ";
+    public static final String STRING_SPACE_TYPE_3 = " 0123456789 ";
+    public static final String STRING_SPACE_TYPE_4 = " 9876543210 ";
+    public static final String STRING_SPACE_TYPE_5 = " LIANG HONG BIN ";
     /**
      * 字符串数组
      */

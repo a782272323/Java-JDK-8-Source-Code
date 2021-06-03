@@ -486,11 +486,191 @@ public interface StringService {
 
     /**
      * @Description public static String join(CharSequence delimiter, CharSequence... elements)
-     *
+     * 通过某个符合连接一个或者多个字符串
      * @Author lianghongbin
      * @Date 18:22 2021/6/2
      * @Param methodType
      * @Return {@link String}
      */
-//    public String join1(StringEnum methodType);
+    public String join1(StringEnum methodType);
+
+    /**
+     * @Description public static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements)
+     * 通过某个符合连接一个或者多个字符串
+     * @Author lianghongbin
+     * @Date 20:45 2021/6/2
+     * @Param methodType
+     * @Return {@link java.lang.String}
+     */
+    public String join2(StringEnum methodType);
+
+    /**
+     * @Description public String toLowerCase(Locale locale)
+     * 将字符串全部转换为小写, Locale表示可以设置语言环境
+     * @Author lianghongbin
+     * @Date 9:15 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String toLowerCase1(StringEnum methodType);
+
+    /**
+     * @Description public String toLowerCase()
+     * 将字符串全部转换为小写,使用默认的语言环境
+     * @Author lianghongbin
+     * @Date 10:20 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String toLowerCase2(StringEnum methodType);
+
+    /**
+     * @Description public String toUpperCase(Locale locale)
+     * 将字符串全部转换为大写, Locale表示可以设置语言环境
+     * @Author lianghongbin
+     * @Date 10:24 2021/6/3
+     * @Param methodType
+     * @Return {@link java.lang.String}
+     */
+    public String toUpperCase1(StringEnum methodType);
+
+    /**
+     * @Description public String toUpperCase()
+     * 将字符串全部转换为大写,使用默认的语言环境
+     * @Author lianghongbin
+     * @Date 10:26 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String toUpperCase2(StringEnum methodType);
+
+    /**
+     * @Description public String trim()
+     * 删除字符串前后的空格
+     * @Author lianghongbin
+     * @Date 10:29 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String trim(StringEnum methodType);
+
+    /**
+     * @Description public String toString()
+     * 将某个对象作为字符串返回，若此对象已经是字符串则返回对象本身
+     * @Author lianghongbin
+     * @Date 10:38 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String toString(StringEnum methodType);
+
+    /**
+     * @Description public char[] toCharArray()
+     * 将此字符串转换为新的字符数组。
+     * @Author lianghongbin
+     * @Date 10:58 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String toCharArray(StringEnum methodType);
+
+    /**
+     * @Description format
+     * 格式化字符串
+     * @Author lianghongbin
+     * @Date 11:52 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String format(StringEnum methodType);
+
+    /**
+     * @Description public static String valueOf(Object obj)
+     * 返回 Object参数的字符串 Object形式。
+     * @Author lianghongbin
+     * @Date 11:58 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String valueOf1(StringEnum methodType);
+
+    /**
+     * @Description public static String valueOf(char[] data)
+     * 返回char数组参数的字符串char形式。
+     * 字符数组的内容被复制; 字符数组的后续修改不会影响返回的字符串。
+     * @Author lianghongbin
+     * @Date 12:06 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String valueOf2(StringEnum methodType);
+
+    /**
+     * @Description public static String valueOf(char[] data, int offset, int count)
+     * data - 字符数组。
+     * offset - 偏移量。
+     * count - 长度。
+     * 返回char数组参数的特定子阵列的字符串char形式
+     * @Author lianghongbin
+     * @Date 12:13 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String valuesOf3(StringEnum methodType);
+
+    /**
+     * @Description public static String valueOf(boolean b)
+     * 返回boolean参数的字符串形式的值 true/false
+     * @Author lianghongbin
+     * @Date 15:10 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String valueOf4(StringEnum methodType);
+
+    /**
+     * @Description public static String valueOf(char c)
+     * 返回 char参数的字符串 char形式。
+     * @Author lianghongbin
+     * @Date 15:13 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String valueOf5(StringEnum methodType);
+
+    /**
+     * @Description public static String copyValueOf(char[] data, int offset, int count)
+     * data - 字符数组。
+     * offset - 偏移量。
+     * count - 长度。
+     * 返回char数组参数的特定子阵列的字符串char形式 - 相等于public static String valueOf(char[] data, int offset, int count)
+     * @Author lianghongbin
+     * @Date 15:04 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String copyValueOf1(StringEnum methodType);
+
+    /**
+     * @Description public static String copyValueOf(char[] data)
+     * 返回char数组参数的字符串char形式。
+     * 字符数组的内容被复制; 字符数组的后续修改不会影响返回的字符串。
+     * 相等于 - public static String valueOf(char[] data)
+     * @Author lianghongbin
+     * @Date 15:06 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String copyValueOf2(StringEnum methodType);
+
+    /**
+     * @Description public String intern()
+     * （1） 当常量池中不存在字符串的引用，将这个对象的引用加入常量池，返回这个对象的引用。
+     * （2） 当常量池中存在字符串的引用，返回这个对象的引用；
+     * @Author lianghongbin
+     * @Date 15:23 2021/6/3
+     * @Param methodType
+     * @Return {@link String}
+     */
+    public String intern(StringEnum methodType);
 }

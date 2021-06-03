@@ -56,7 +56,29 @@ public enum StringEnum {
     REPLACE_ALL("public String replaceAll(String regex, String replacement)"),
     SPLIT_1("public String[] split(String regex, int limit)"),
     SPLIT_2("public String[] split(String regex)"),
-    JOIN_1("public static String join(CharSequence delimiter, CharSequence... elements)");
+    JOIN_1("public static String join(CharSequence delimiter, CharSequence... elements)"),
+    JOIN_2("public static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements)"),
+    TO_LOWER_CASE_1("public String toLowerCase(Locale locale)"),
+    TO_LOWER_CASE_2("public String toLowerCase()"),
+    TO_UPPER_CASE_1("public String toUpperCase(Locale locale)"),
+    TO_UPPER_CASE_2("public String toUpperCase()"),
+    TRIM("public String trim()"),
+    TO_STRING("public String toString()"),
+    TO_CHAR_ARRAY("public char[] toCharArray()"),
+    FORMAT_1("public static String format(String format, Object... args)"),
+    FORMAT_2("public static String format(Locale l, String format, Object... args)"),
+    VALUE_OF_1("public static String valueOf(Object obj)"),
+    VALUE_OF_2("public static String valueOf(char[] data)"),
+    VALUE_OF_3("public static String valueOf(char[] data, int offset, int count)"),
+    VALUE_OF_4("public static String valueOf(boolean b)"),
+    VALUE_OF_5("public static String valueOf(char c)"),
+    VALUE_OF_6("public static String valueOf(int i)"),
+    VALUE_OF_7("public static String valueOf(long l)"),
+    VALUE_OF_8("public static String valueOf(float f)"),
+    VALUE_OF_9("public static String valueOf(double d)"),
+    COPY_VALUE_OF_1("public static String copyValueOf(char[] data, int offset, int count)"),
+    COPY_VALUE_OF_2("public static String copyValueOf(char[] data)"),
+    INTERN("public String intern()");
 
     public String methodName;
 
