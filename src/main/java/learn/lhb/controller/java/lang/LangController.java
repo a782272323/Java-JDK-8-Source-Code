@@ -2,7 +2,7 @@ package learn.lhb.controller.java.lang;
 
 import learn.lhb.common.constant.ResponseConstant;
 import learn.lhb.jdk.source.java.lang.string.StringEnum;
-import learn.lhb.service.java.string.StringService;
+import learn.lhb.service.java.lang.StringService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

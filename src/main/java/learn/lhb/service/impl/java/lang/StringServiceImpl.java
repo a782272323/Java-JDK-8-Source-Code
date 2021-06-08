@@ -5,7 +5,7 @@ import learn.lhb.common.constant.RegexConstant;
 import learn.lhb.common.constant.ResponseConstant;
 import learn.lhb.common.constant.StringConstant;
 import learn.lhb.jdk.source.java.lang.string.StringEnum;
-import learn.lhb.service.java.string.StringService;
+import learn.lhb.service.java.lang.StringService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -1383,7 +1383,7 @@ public class StringServiceImpl implements StringService {
      * @Param methodType
      * @Return {@link String}
      */
-    private String responseStr(StringEnum methodType) {
+    private static String responseStr(StringEnum methodType) {
         return methodType.getMethodName() + responseStr;
     }
 }

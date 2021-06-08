@@ -1,4 +1,4 @@
-package learn.lhb.service.java.string;
+package learn.lhb.service.java.lang;
 
 import learn.lhb.jdk.source.java.lang.string.StringEnum;
 
