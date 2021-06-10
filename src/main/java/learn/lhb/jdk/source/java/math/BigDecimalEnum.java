@@ -11,7 +11,16 @@ public enum  BigDecimalEnum {
     /**
      * 方法枚举
      */
-    VALUE_OF_1("public static BigDecimal valueOf(long unscaledVal, int scale)");
+    VALUE_OF_1("public static BigDecimal valueOf(long unscaledVal, int scale)"),
+    VALUE_OF_2("public static BigDecimal valueOf(long val)"),
+    VALUE_OF_3("public static BigDecimal valueOf(double val)"),
+    ADD_1("public BigDecimal add(BigDecimal augend)"),
+    ADD_2("public BigDecimal add(BigDecimal augend, MathContext mc)"),
+    SUBTRACT_1("public BigDecimal subtract(BigDecimal subtrahend)"),
+    SUBTRACT_2("public BigDecimal subtract(BigDecimal subtrahend, MathContext mc)"),
+    MULTIPLY_1("public BigDecimal multiply(BigDecimal multiplicand)"),
+    MULTIPLY_2("public BigDecimal multiply(BigDecimal multiplicand, MathContext mc)"),
+    DIVIDE_1("public BigDecimal divide(BigDecimal divisor, int scale, int roundingMode)");
     private String methodName;
 
     public String getMethodName() {

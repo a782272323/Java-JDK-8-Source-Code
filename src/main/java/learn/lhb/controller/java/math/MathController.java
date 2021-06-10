@@ -20,11 +20,34 @@ public class MathController {
     @Autowired
     private BigDecimalService bigDecimalService;
 
+    /**
+     * @Description BigDecimal 使用案例
+     * @Author lianghongbin
+     * @Date 10:24 2021/6/9
+     * @Param methodType
+     * @Return {@link String}
+     */
     @GetMapping("bigDecimal/case")
     public String bigDecimalCase(BigDecimalEnum methodType) {
         switch (methodType) {
             case VALUE_OF_1:
                 return bigDecimalService.valueOf1(methodType);
+            case VALUE_OF_2:
+                return bigDecimalService.valueOf2(methodType);
+            case VALUE_OF_3:
+                return bigDecimalService.valueOf3(methodType);
+            case ADD_1:
+                return bigDecimalService.add1(methodType);
+            case ADD_2:
+                return bigDecimalService.add2(methodType);
+            case SUBTRACT_1:
+                return bigDecimalService.subtract1(methodType);
+            case SUBTRACT_2:
+                return bigDecimalService.subtract2(methodType);
+            case MULTIPLY_1:
+                return bigDecimalService.multiply1(methodType);
+            case MULTIPLY_2:
+                return bigDecimalService.multiply2(methodType);
             default:
                 return ResponseConstant.RESPONSE_ERROR_PRINT_MSG;
         }

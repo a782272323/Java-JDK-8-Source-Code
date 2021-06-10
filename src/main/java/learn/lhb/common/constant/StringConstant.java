@@ -77,5 +77,12 @@ public class StringConstant {
     public static final String[] STRINGS_BIG_LETTER = {"ABC", "DEF", "GHI", "JKL", "MNO", "PQR", "STU", "VWX", "YZ"};
     public static final String[] STRINGS_NUMBER = {"01", "23", "45", "67", "89"};
     public static final String[] STRINGS_NUMBER_REVERSE = {"98", "76", "54", "32", "10"};
-
+    /**
+     * 用于 BigDecimal 的字符串
+     */
+    public static final String STRING_BIG_DECIMAL_TYPE_1 = "123456";
+    public static final String STRING_BIG_DECIMAL_TYPE_2 = "1230.45";
+    public static final String STRING_BIG_DECIMAL_TYPE_3 = "0.12";
+    public static final String STRING_BIG_DECIMAL_TYPE_4 = "1238.09";
+    public static final String STRING_BIG_DECIMAL_TYPE_5 = "12.25";
 }
